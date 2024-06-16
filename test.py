@@ -4,6 +4,7 @@ import numpy as np
 train = pd.read_csv("mercari-price-suggestion-challenge/train.tsv", delimiter='\t', low_memory=True)
 test = pd.read_csv("mercari-price-suggestion-challenge/test.tsv", delimiter='\t', low_memory=True)
 
+
 #trainデータ
 train.name = train.name.astype("category")
 train.category_name = train.category_name.astype("category")
