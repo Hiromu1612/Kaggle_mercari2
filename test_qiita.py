@@ -75,6 +75,5 @@ def main():
     y_pred = np.expm1(y_scaler.inverse_transform(y_pred.reshape(-1, 1))[:, 0])
     print('Valid RMSLE: {:.4f}'.format(np.sqrt(mean_squared_log_error(valid['price'], y_pred))))
 
-
 if __name__ == '__main__':
     main()
