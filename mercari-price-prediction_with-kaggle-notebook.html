@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>mercari-price-prediction_kaggle-notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>mercari-price-prediction_with-kaggle-notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7514,7 +7514,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -7537,7 +7537,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/kaggle/input/dataset/train.tsv'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -7675,7 +7675,7 @@ None
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/kaggle/input/dataset/test.tsv'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -7806,7 +7806,7 @@ None
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -7843,8 +7843,8 @@ None
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>CPU times: user 17.1 s, sys: 0 ns, total: 17.1 s
-Wall time: 17.1 s
+<pre>CPU times: user 12.7 s, sys: 0 ns, total: 12.7 s
+Wall time: 12.7 s
 </pre>
 </div>
 </div>
@@ -7855,7 +7855,7 @@ Wall time: 17.1 s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -7873,8 +7873,8 @@ Wall time: 17.1 s
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>CPU times: user 35.6 ms, sys: 0 ns, total: 35.6 ms
-Wall time: 33.1 ms
+<pre>CPU times: user 33.6 ms, sys: 1.49 ms, total: 35.1 ms
+Wall time: 32.8 ms
 </pre>
 </div>
 </div>
@@ -7885,7 +7885,7 @@ Wall time: 33.1 ms
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -7919,8 +7919,8 @@ Wall time: 33.1 ms
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>CPU times: user 9.77 s, sys: 507 ms, total: 10.3 s
-Wall time: 10.3 s
+<pre>CPU times: user 8.73 s, sys: 490 ms, total: 9.22 s
+Wall time: 9.2 s
 </pre>
 </div>
 </div>
@@ -7931,7 +7931,7 @@ Wall time: 10.3 s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -8023,8 +8023,8 @@ For example, when doing 'df[col].method(value, inplace=True)', try using 'df.met
 137418
 295525
 64154
-CPU times: user 1min 46s, sys: 526 ms, total: 1min 47s
-Wall time: 1min 47s
+CPU times: user 1min 11s, sys: 503 ms, total: 1min 11s
+Wall time: 1min 11s
 </pre>
 </div>
 </div>
@@ -8035,7 +8035,7 @@ Wall time: 1min 47s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -8069,13 +8069,13 @@ Wall time: 1min 47s
 <pre>Training : 1467709 examples
 Validating : 14826 examples
 Testing : 693359 examples
-CPU times: user 1.59 s, sys: 64.1 ms, total: 1.66 s
-Wall time: 1.65 s
+CPU times: user 1.5 s, sys: 54 ms, total: 1.55 s
+Wall time: 1.55 s
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>0</pre>
 </div>
@@ -8087,7 +8087,7 @@ Wall time: 1.65 s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -8126,8 +8126,8 @@ Wall time: 1.65 s
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Handling missing values...
-CPU times: user 6.78 s, sys: 564 ms, total: 7.34 s
-Wall time: 7.34 s
+CPU times: user 4.62 s, sys: 564 ms, total: 5.18 s
+Wall time: 5.18 s
 </pre>
 </div>
 </div>
@@ -8138,7 +8138,7 @@ Wall time: 7.34 s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -8166,7 +8166,7 @@ Wall time: 7.34 s
         <span class="c1"># bag-of-wordで分割する単位をn-gramで連続する単語のつながりとする</span>
         <span class="c1"># 商品名は2-gram(2つの単語のつながり)で分割</span>
         <span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-        <span class="n">max_features</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="c1"># トークンカウントの上限値############### 50000</span>
+        <span class="n">max_features</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="c1"># トークンカウントの上限値############### 50000</span>
         <span class="c1"># トークンカウントステップをオーバーライド</span>
         <span class="n">preprocessor</span><span class="o">=</span><span class="n">build_preprocessor</span><span class="p">(</span><span class="s1">'name'</span><span class="p">))),</span>
     <span class="p">(</span><span class="s1">'subcat_0'</span><span class="p">,</span> <span class="n">CountVectorizer</span><span class="p">(</span>
@@ -8198,7 +8198,7 @@ Wall time: 7.34 s
         <span class="c1"># bag-of-wordで分割する単位をn-gramで連続する単語のつながりとする</span>
         <span class="c1"># 商品説名は3-gram(3つの単語のつながり)で分割</span>
         <span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
-        <span class="n">max_features</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="c1"># トークンカウントの上限値#################### 100000</span>
+        <span class="n">max_features</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="c1"># トークンカウントの上限値#################### 100000</span>
         <span class="n">preprocessor</span><span class="o">=</span><span class="n">build_preprocessor</span><span class="p">(</span><span class="s1">'item_description'</span><span class="p">))),</span>
 <span class="p">])</span>
 
@@ -8243,14 +8243,14 @@ Wall time: 7.34 s
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Vectorizing data...
-X: (2175894, 175913)
-X_train: (1467709, 175913)
-X_dev: (14826, 175913)
-X_test: (693359, 175913)
+X: (2175894, 183913)
+X_train: (1467709, 183913)
+X_dev: (14826, 183913)
+X_test: (693359, 183913)
 Y_train: (1467709, 1)
 Y_dev: (14826, 1)
-CPU times: user 9min 23s, sys: 13.1 s, total: 9min 36s
-Wall time: 9min 36s
+CPU times: user 7min 17s, sys: 12.3 s, total: 7min 29s
+Wall time: 7min 28s
 </pre>
 </div>
 </div>
@@ -8261,7 +8261,7 @@ Wall time: 9min 36s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -8301,13 +8301,13 @@ Wall time: 9min 36s
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Fitting Ridge model on training examples...
 Fitting RidgeCV model on training examples...
-CPU times: user 12min 8s, sys: 9min 48s, total: 21min 56s
-Wall time: 6min 29s
+CPU times: user 13min 17s, sys: 9min 58s, total: 23min 16s
+Wall time: 7min 13s
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div class="sk-top-container" id="sk-container-id-1"><div class="sk-text-repr-fallback"><pre>RidgeCV(alphas=[5.0], cv=2, scoring='neg_mean_squared_error')</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br/>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator sk-toggleable"><input checked="" class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox"/><label class="sk-toggleable__label sk-toggleable__label-arrow" for="sk-estimator-id-1">RidgeCV</label><div class="sk-toggleable__content"><pre>RidgeCV(alphas=[5.0], cv=2, scoring='neg_mean_squared_error')</pre></div></div></div></div></div>
 </div>
@@ -8319,7 +8319,7 @@ Wall time: 6min 29s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">Y_dev_preds_ridge</span> <span class="o">=</span> <span class="n">ridge_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_dev</span><span class="p">)</span>
@@ -8337,7 +8337,7 @@ Wall time: 6min 29s
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Ridge model RMSL error: 0.017227598532414803
+<pre>Ridge model RMSL error: 0.015345187092440295
 </pre>
 </div>
 </div>
@@ -8348,7 +8348,7 @@ Wall time: 6min 29s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># RidgeCVモデルに検証データを入力して損失を測定</span>
@@ -8367,7 +8367,7 @@ Wall time: 6min 29s
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>RidgeCV model RMSL error: 0.01705041819933213
+<pre>RidgeCV model RMSL error: 0.015183877193463313
 </pre>
 </div>
 </div>
@@ -8380,7 +8380,7 @@ Wall time: 6min 29s
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>値が異常に低いので、RMSE関数を自作して計算してみる</p>
+<p>値が異常に低いので、自作関数を用いて計算してみる</p>
 </div>
 </div>
 </div>
@@ -8389,7 +8389,7 @@ Wall time: 6min 29s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># RMSE(Root Mean Square Error):二乗平均平方根誤差</span>
@@ -8407,7 +8407,7 @@ Wall time: 6min 29s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">Y_dev_preds_ridge</span> <span class="o">=</span> <span class="n">ridge_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_dev</span><span class="p">)</span>
@@ -8425,7 +8425,7 @@ Wall time: 6min 29s
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Ridge model RMSL error: 0.5157330525857923
+<pre>Ridge model RMSL error: 0.48396093503959875
 </pre>
 </div>
 </div>
@@ -8436,7 +8436,7 @@ Wall time: 6min 29s
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># RidgeCVモデルに検証データを入力して損失を測定</span>
@@ -8455,7 +8455,7 @@ Wall time: 6min 29s
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>RidgeCV model RMSL error: 0.5125338609304031
+<pre>RidgeCV model RMSL error: 0.4810661051625231
 </pre>
 </div>
 </div>
