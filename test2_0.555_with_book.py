@@ -6,6 +6,7 @@ test = pd.read_csv("test.tsv", delimiter='\t', low_memory=True)
 
 train = train.drop(train[(train.price < 3.0)].index)
 
+
 def split_cat(text):
     try: return text.split("/")
     except: return ("No Label", "No Label", "No Label") #categoryがない場合はNo Labelを返す
