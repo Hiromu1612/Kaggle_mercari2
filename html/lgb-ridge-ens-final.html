@@ -8227,7 +8227,7 @@ dtype: int64
     <span class="k">return</span> <span class="n">brand</span>
 
 <span class="c1"># ブランド名の付替えを実施</span>
-<span class="n">train_test_combine</span><span class="p">[</span><span class="s1">'brand_name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">train_test_combine</span><span class="p">[[</span><span class="s1">'brand_name'</span><span class="p">,</span><span class="s1">'name'</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">brandfinder</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># axis=1で行方向</span>
+<span class="n">train_test_combine</span><span class="p">[</span><span class="s1">'brand_name'</span><span class="p">]</span> <span class="o">=</span> <span class="n">train_test_combine</span><span class="p">[[</span><span class="s1">'brand_name'</span><span class="p">,</span><span class="s1">'name'</span><span class="p">]]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">brandfinder</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># axis=1 で行方向</span>
 
 <span class="c1"># brandfinderの中身</span>
 <span class="n">train_test_combine</span><span class="p">[[</span><span class="s1">'brand_name'</span><span class="p">,</span><span class="s1">'name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -8825,6 +8825,7 @@ sub_cat2 encoding shape: (2165645, 882)
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ハイパーパラメータの設定</span>
+<span class="c1"># from lgb-ridge-ens-v3-round175.ipynb</span>
 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'objective'</span><span class="p">:</span> <span class="s1">'regression'</span><span class="p">,</span>
     <span class="s1">'metric'</span><span class="p">:</span> <span class="s1">'rmse'</span><span class="p">,</span>
@@ -9046,7 +9047,7 @@ Wall time: 1min 21s
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
-<span class="c1"># ログレベルをWARNINGに設定</span>
+<span class="c1"># ログレベルを WARNING に設定</span>
 <span class="n">optuna</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">set_verbosity</span><span class="p">(</span><span class="n">optuna</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
 
 <span class="c1"># Optuna による最適化</span>
@@ -9582,8 +9583,7 @@ Wall time: 89.3 ms
 <div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 最適な重みを使用して予測を行う</span>
-<span class="n">w1</span><span class="p">,</span> <span class="n">w2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">w1</span><span class="p">,</span> <span class="n">w2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span> <span class="c1"># from lgb-ridge-ens-v3-round175.ipynb</span>
 <span class="n">y_train_pred</span> <span class="o">=</span> <span class="n">w1</span> <span class="o">*</span> <span class="n">gbm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span> <span class="o">+</span> <span class="n">w2</span> <span class="o">*</span> <span class="n">ridge</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -9637,8 +9637,7 @@ Wall time: 89.3 ms
 <div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 最適な重みを使用して予測を行う</span>
-<span class="n">w1</span><span class="p">,</span> <span class="n">w2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">w1</span><span class="p">,</span> <span class="n">w2</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span> <span class="c1"># from lgb-ridge-ens-v3-round175.ipynb</span>
 <span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">w1</span><span class="o">*</span><span class="n">gbm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> <span class="o">+</span> <span class="n">w2</span><span class="o">*</span><span class="n">ridge</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 </pre></div>
 </div>
